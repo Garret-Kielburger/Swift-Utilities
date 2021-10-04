@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Basic_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c3Z-7C-0cA" userLabel="Gradient Circle Stack View">
+                                <rect key="frame" x="20" y="44" width="175" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c05-LP-a6f" userLabel="Gradient Circle Rotate" customClass="GradientCircleView" customModule="Basic_Animations" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="219"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-e2-i2m" userLabel="Gradient Circle Rotate Button">
+                                        <rect key="frame" x="0.0" y="219" width="175" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Rotate"/>
+                                        <connections>
+                                            <action selector="gradientCircleButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NgP-AL-hhE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="awU-Rr-X4n" userLabel="width = 175"/>
+                                    <constraint firstAttribute="height" constant="250" id="l4O-tW-61u"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jt6-Ui-7GV" userLabel="Gradient Circle Colour Change Stack View">
+                                <rect key="frame" x="219" y="44" width="175" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVS-MY-e8a" userLabel="Gradient Circle Colour Change" customClass="GradientCircleView" customModule="Basic_Animations" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="219"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-Hz-cWh" userLabel="Gradient Circle Colour Button">
+                                        <rect key="frame" x="0.0" y="219" width="175" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Colour Change"/>
+                                        <connections>
+                                            <action selector="gradientCircleColourChange_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwJ-fe-X4H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="cRY-Io-t6b" userLabel="Horizontal Movement Stack View">
+                                <rect key="frame" x="40" y="314" width="334" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right.and.line.vertical.and.arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ekk-VE-AhC" userLabel="Horizontal Movement Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="29.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="LKq-0W-U05"/>
+                                            <constraint firstAttribute="width" constant="30" id="WqR-sc-owo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyP-Gi-bBA" userLabel="Horizontal Movement Button">
+                                        <rect key="frame" x="0.0" y="44" width="334" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Move Horizontally"/>
+                                        <connections>
+                                            <action selector="moveHorizontally_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgU-Mt-swa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RyP-Gi-bBA" firstAttribute="centerX" secondItem="cRY-Io-t6b" secondAttribute="centerX" id="Og9-mb-0Fd"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oa-4E-n8c" userLabel="Resize Button">
+                                <rect key="frame" x="152.5" y="811" width="109.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Resize Image"/>
+                                <connections>
+                                    <action selector="resizeImageButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rj6-WP-aA4"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smoke.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EMI-vd-bGb" userLabel="Resize Image">
+                                <rect key="frame" x="57" y="492.5" width="300" height="296.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Vsr-TO-3Qc"/>
+                                    <constraint firstAttribute="width" constant="300" id="ygH-xq-TlX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRY-Io-t6b" secondAttribute="trailing" constant="40" id="0ND-RQ-9CD"/>
+                            <constraint firstItem="cRY-Io-t6b" firstAttribute="height" secondItem="Jt6-Ui-7GV" secondAttribute="height" multiplier="0.3" id="19V-Qc-QLy"/>
+                            <constraint firstItem="6Oa-4E-n8c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ro-f7-Rru"/>
+                            <constraint firstItem="cRY-Io-t6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4ZP-nn-yYU"/>
+                            <constraint firstItem="c3Z-7C-0cA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5yb-jf-y5K"/>
+                            <constraint firstItem="EMI-vd-bGb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RIH-wS-4iK"/>
+                            <constraint firstItem="cRY-Io-t6b" firstAttribute="top" secondItem="c3Z-7C-0cA" secondAttribute="bottom" constant="20" id="RN0-b0-2tX"/>
+                            <constraint firstItem="c3Z-7C-0cA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WUx-fG-ep0"/>
+                            <constraint firstItem="Jt6-Ui-7GV" firstAttribute="width" secondItem="c3Z-7C-0cA" secondAttribute="width" id="auC-k5-WGT"/>
+                            <constraint firstItem="Jt6-Ui-7GV" firstAttribute="height" secondItem="c3Z-7C-0cA" secondAttribute="height" id="bMR-GK-7pw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Oa-4E-n8c" secondAttribute="bottom" constant="20" id="fb8-Gi-gVV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jt6-Ui-7GV" secondAttribute="trailing" constant="20" id="lRc-tx-FyZ"/>
+                            <constraint firstItem="Jt6-Ui-7GV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oK8-av-g3c"/>
+                            <constraint firstItem="6Oa-4E-n8c" firstAttribute="top" secondItem="EMI-vd-bGb" secondAttribute="bottom" constant="20" id="tn5-YW-3TS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gradientCircleColourChange" destination="WVS-MY-e8a" id="p29-v9-Nv3"/>
+                        <outlet property="gradientCircleRotate" destination="c05-LP-a6f" id="8rk-Cs-ls9"/>
+                        <outlet property="horizontalMovementImageView" destination="Ekk-VE-AhC" id="llw-eJ-TSe"/>
+                        <outlet property="resizeImageImageView" destination="EMI-vd-bGb" id="xIQ-ce-4UZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.right.and.line.vertical.and.arrowtriangle.left.fill" catalog="system" width="128" height="89"/>
+        <image name="smoke.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

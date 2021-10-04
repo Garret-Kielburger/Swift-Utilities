@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Swift Utilities">
+      <Group
+         location = "container:"
+         name = "Basic Animations">
+         <FileRef
+            location = "group:Basic Animations/Basic Animations.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "NFC">
+         <FileRef
+            location = "group:NFC/NFC.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "VPNConnect">
+         <FileRef
+            location = "group:VPNConnect/VPNConnect.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "CodableCoreData">
+         <FileRef
+            location = "group:CodableCoreData/CodableCoreData.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "DropDownListView">
+         <FileRef
+            location = "group:DropDownListView/DropDownListView.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "UserDefs">
+         <FileRef
+            location = "group:UserDefs/UserDefs.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
