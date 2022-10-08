@@ -36,7 +36,7 @@ class KeychainService: NSObject {
         keychainQuery[kSecAttrGenericValue as! NSCopying] = keyData
         keychainQuery[kSecAttrAccountValue as! NSCopying] = keyData
         keychainQuery[kSecAttrServiceValue as! NSCopying] = "VPN"
-        keychainQuery[kSecAttrAccessibleValue as! NSCopying] = kSecAttrAccessibleAlwaysThisDeviceOnly
+        keychainQuery[kSecAttrAccessibleValue as! NSCopying] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
         keychainQuery[kSecValueData as! NSCopying] = valueData;
 
         // Delete any existing items
@@ -55,7 +55,7 @@ class KeychainService: NSObject {
         keychainQuery[kSecAttrGenericValue as! NSCopying] = keyData
         keychainQuery[kSecAttrAccountValue as! NSCopying] = keyData
         keychainQuery[kSecAttrServiceValue as! NSCopying] = "VPN"
-        keychainQuery[kSecAttrAccessibleValue as! NSCopying] = kSecAttrAccessibleAlwaysThisDeviceOnly
+        keychainQuery[kSecAttrAccessibleValue as! NSCopying] = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
         keychainQuery[kSecMatchLimit] = kSecMatchLimitOne
         keychainQuery[kSecReturnPersistentRef] = kCFBooleanTrue
 
@@ -68,6 +68,7 @@ class KeychainService: NSObject {
             if let data = result as! NSData? {
 
                 if let value = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) {
+                    print(value)
                 }
                 return data as Data;
             }

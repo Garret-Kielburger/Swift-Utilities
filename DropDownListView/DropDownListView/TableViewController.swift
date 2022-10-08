@@ -42,7 +42,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if allItems[section].opened == true {
+        if allItems[section].isOpen == true {
             return allItems[section].cells.count + 1 // Plus one to account for the first drop-down cell
         } else {
             return 1 // This is the section cell containing the others
@@ -64,12 +64,12 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 { // To prevent closing the dropdown when touching child cells
-            if allItems[indexPath.section].opened == true {
-                allItems[indexPath.section].opened = false
+            if allItems[indexPath.section].isOpen == true {
+                allItems[indexPath.section].isOpen = false
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .fade)
             } else {
-                allItems[indexPath.section].opened = true
+                allItems[indexPath.section].isOpen = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .fade)
             }

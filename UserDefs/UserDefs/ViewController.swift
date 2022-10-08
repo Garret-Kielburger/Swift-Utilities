@@ -22,9 +22,8 @@ class ViewController: UIViewController {
         let whatsMyName = UserDefs.fetchName()
         let whatsThatTime = UserDefs.fetchTime()
         
-        
+        print(whatsMyName)
+        print(whatsThatTime)
     }
-
-
 }
 

@@ -81,9 +81,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Private methods
     private func instantiateMainViewController() {
         let mainViewController = MainViewController.create(persistentContainer: persistentContainer)
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = mainViewController
-        self.window?.makeKeyAndVisible()
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = mainViewController
+//        self.window?.makeKeyAndVisible()
     }
 }
 
